@@ -1,0 +1,125 @@
+/* --- Reseteo Básico y Estilos Globales --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1a2a45;
+}
+
+/* --- Hero Section (Encabezado principal) --- */
+.hero {
+    background: linear-gradient(rgba(26, 42, 69, 0.85), rgba(26, 42, 69, 0.85)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content .logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Secciones Principales --- */
+main section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* --- Sección de Misión --- */
+.mission {
+    background-color: #fff;
+}
+
+.mission h2 {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.mission-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+}
+
+.mission .column {
+    flex-basis: 45%;
+    min-width: 300px;
+    background: #f4f7f6;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.mission .column h3 {
+    margin-top: 0;
+    color: #007aff; /* Un color de acento */
+}
+
+/* --- Sección de Transparencia --- */
+.transparency {
+    background-color: #1a2a45;
+    color: #fff;
+}
+
+.transparency h2 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.transparency p {
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Sección del Secreto --- */
+.secret {
+    background-color: #fff;
+}
+
+.secret h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.secret p {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
