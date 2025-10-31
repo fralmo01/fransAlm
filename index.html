@@ -2,56 +2,161 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Un Proyecto para el Futuro</title>
-    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <nav class="main-nav">
+        <div class="container">
+            <span class="nav-logo">[ Proyecto Secreto ]</span>
+            <ul class="nav-menu">
+                <li><a href="#problem">El Sistema</a></li>
+                <li><a href="#idea">La Idea</a></li>
+                <li><a href="#approach">El Enfoque</a></li>
+                <li><a href="#mission">La Misión</a></li>
+                <li><a href="#roadmap">Hoja de Ruta</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="hero-content">
-            <h1>Un Movimiento está Naciendo.</h1>
-            <p class="subtitle">Estamos construyendo algo grande, algo diferente. Un proyecto diseñado desde cero para generar un impacto real y duradero.</p>
+            <h1 class="hero-title">Rompiendo el Molde.</h1>
+            <p class="hero-subtitle">Algunos sistemas no deben ser mejorados, sino reemplazados. Estamos construyendo un nuevo camino.</p>
         </div>
     </header>
 
     <main>
-        <section class="mission">
-            <h2>Nuestra Misión: Un Propósito Claro</h2>
-            <div class="mission-columns">
-                <div class="column">
-                    <h3>Educación Gratuita y de Calidad</h3>
-                    <p>Creemos que el conocimiento es la herramienta más poderosa para el cambio. Los fondos recaudados se destinarán a la creación de una empresa cuyo pilar fundamental será ofrecer programas educativos accesibles y gratuitos para transformar vidas en nuestras comunidades urbanas.</p>
-                </div>
-                <div class="column">
-                    <h3>Apoyo a Quienes Más lo Necesitan</h3>
-                    <p>La tecnología y la innovación deben servir a la humanidad. Nuestro objetivo es desarrollar soluciones y brindar apoyo directo a personas de escasos recursos, mejorando su calidad de vida y creando nuevas oportunidades donde antes no las había.</p>
+        <section id="problem" class="section-light">
+            <div class="container">
+                <h2 class="section-title">El Sistema Actual</h2>
+                <div class="problem-content">
+                    <p>Estamos atrapados en un sistema diseñado para estancarnos. Un bucle que recompensa la conformidad y limita el verdadero crecimiento. Nos enseña a competir por recursos escasos en lugar de crear abundancia.</p>
+                    <p>Nos prometen un "crecimiento" que a menudo significa más de lo mismo, dejándonos estancados en un presente perpetuo.</p>
                 </div>
             </div>
         </section>
 
-        <section class="transparency">
-            <div class="container">
-                <h2>El Poder de la Transparencia</h2>
-                <p>Cada paso que damos, cada decisión que tomamos, será visible. Estamos comprometidos con una transparencia total en el uso de los fondos. A través de tecnología y procesos claros, podrás seguir el progreso y verificar que cada recurso se utiliza para cumplir nuestra misión.</p>
+        <section id="idea" class="section-dark">
+            <div class="container two-column-layout">
+                <div class="text-content">
+                    <h2 class="section-title left-align">La Chispa</h2>
+                    <p>¿Y si pudiéramos construir algo diferente? ¿Un motor que no funcione con escasez, sino con propósito?</p>
+                    <p class="highlight-text">Esta idea nace de la frustración, pero se alimenta de la esperanza. Nacemos en Latinoamérica porque conocemos a nuestra gente. Sabemos que están golpeados, cansados de lo mismo y listos para un cambio real. No se trata solo de mejorar, se trata de construir algo que nos pertenezca.</p>
+                </div>
+                <div class="image-content">
+                    <img class="section-image" src="https://images.unsplash.com/photo-1542621334-a254cf47763b?q=80&w=2070&auto=format&fit=crop" alt="Equipo trabajando en una idea">
+                </div>
             </div>
         </section>
 
-        <section class="secret">
+        <section id="approach" class="section-light">
             <div class="container">
-                <h2>El Nombre es un Secreto. La Misión no.</h2>
-                <p>Hemos decidido mantener en secreto el nombre de la futura empresa. ¿La razón? Queremos que el foco esté en el "porqué", no en el "quién". La identidad completa será revelada al público únicamente cuando la estructura esté consolidada y lista para operar.</p>
-                <p>Lo que importa ahora es la visión que compartimos: construir un futuro más justo y equitativo para todos.</p>
+                <h2 class="section-title">Nuestro Enfoque</h2>
+                <p class="section-subtitle">No pedimos donaciones. Construimos motores.</p>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Innovación como Herramienta</h3>
+                        <p>Desarrollamos tecnología de vanguardia no como un fin, sino como el medio para crear sistemas más justos y eficientes.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sostenibilidad como Motor</h3>
+                        <p>Creamos un modelo auto-sostenible. Un motor que genera sus propios recursos para financiar su misión a perpetuidad, sin depender de nadie.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Impacto como Misión</h3>
+                        <p>El objetivo final no es la ganancia, es el impacto. Cada recurso generado se reinvierte en la misión principal: el desarrollo humano.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Gobernanza Colectiva</h3>
+                        <p>La comunidad tendrá el poder real de votar sobre el rumbo de futuros proyectos y expansiones. Tu voz dirigirá el sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission" class="section-dark">
+            <div class="container two-column-layout reverse">
+                <div class="text-content">
+                    <h2 class="section-title left-align">El Objetivo Final</h2>
+                    <div class="mission-columns">
+                        <div class="column">
+                            <h3>Conocimiento Libre</h3>
+                            <p>Creemos que la educación de calidad es un derecho, no un privilegio. El pilar de nuestra misión será ofrecer programas educativos gratuitos y de clase mundial.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Oportunidades Reales</h3>
+                            <p>Queremos cerrar la brecha. Daremos apoyo directo y crearemos nuevas oportunidades para aquellos en comunidades urbanas que han sido dejados atrás por el sistema actual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img class="section-image" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Personas en una reunión colaborativa">
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="section-light">
+            <div class="container">
+                <h2 class="section-title">Nuestra Hoja de Ruta Global</h2>
+                <p class="section-subtitle">Construir un sistema fuerte es el primer paso para un cambio real y global.</p>
+                
+                <div class="roadmap-container">
+                    <div class="roadmap-step">
+                        <h3>Fase 1: Latinoamérica</h3>
+                        <p>Establecer y fortalecer el sistema en nuestro hogar. Probar, aprender y construir una base sólida con nuestra gente.</p>
+                    </div>
+                    <div class="roadmap-arrow">→</div>
+                    <div class="roadmap-step">
+                        <h3>Fase 2: África</h3>
+                        <p>Llevar el modelo a las zonas más necesitadas, expandiendo el impacto y creando una red de prosperidad global.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-justification">
+                    <h3>El Capital Semilla</h3>
+                    <p>Esta visión es ambiciosa y por eso necesitamos un capital fuerte. Para construir la base de este motor, **nuestro objetivo inicial es de solo $1,000,000**. No es un gasto, es la siembra para un sistema perpetuo. Cada recurso se usará para construir el motor que financiará esta expansión.</p>
+                    <p class="highlight-text large">El nombre es un secreto. La misión no.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Próximamente habrá más información. Gracias por tu confianza.</p>
+        <div class="container">
+            <h3>Comunica el Avance</h3>
+            <p>La transparencia es clave. Un influencer dedicado comunicará cada avance, logro y desafío del proyecto en estas plataformas.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Seguir en X">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
+                        <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L380.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L825.012 1226.37H1200L714.163 519.284ZM569.165 687.828L521.69 619.614L144.011 79.6907H318.84L603.28 514.354L650.755 582.568L1048.43 1150.31H873.599L569.165 687.828Z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Unirse a Telegram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.24.03.41-.01.32-.045.64-.09.952-.18 1.25-.455 3.08-.71 4.73-.24 1.54-.51 2.94-.51 2.94s-.01.29-.14.4s-.32.18-.48.18c-.2 0-.41-.09-.59-.18-.2-.1-.33-.18-.33-.18s-2.42-1.58-3.79-2.93c-.93-.93-1.28-1.2-1.5-1.4s-.32-.2-.48-.09c-.2 0-.33.09-.44.18-.1.1-.2.18-.2.18s-.68.61-1.89 1.76c-.3.3-.57.53-.82.53-.25 0-.46-.09-.61-.27a.99.99 0 0 1-.31-.74c-.01-.25.04-.51.13-.77.34-.98 1.25-3.23 1.25-3.23s.2-.52.57-.84c.37-.32.86-.6 1.4-.81l4.89-3.03s.34-.2.34 0z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Ver en Kick">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M4 0H0v16h4V9.667h2.333L10 13.333V9.667h1.667L16 16V0H4zm6.667 8.667l-2.334 2.333V5.333l2.334 2.334v.333s0 .333 0 .667z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-small">Un futuro diferente no se pide. Se construye.</p>
+        </div>
     </footer>
-
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
