@@ -1,10 +1,10 @@
-/* --- Variables de Color y Reseteo --- */
+/* --- Variables de Color y Reseteo (Tema Oscuro) --- */
 :root {
-    --primary-dark: #1a202c;  /* Azul noche (para texto) */
-    --primary-light: #f7fafc; /* Gris muy claro (fondo) */
-    --secondary-light: #ffffff; /* Blanco (para tarjetas y secciones) */
-    --text-muted: #4a5568;     /* Gris (para párrafos) */
-    --accent-color: #d69e2e;   /* Dorado/Ámbar (para acentos serios) */
+    --primary-dark: #0A0A0A;  /* Fondo principal (negro) */
+    --primary-light: #F5F5F5; /* Texto principal (blanco roto) */
+    --secondary-light: #1A1A1A; /* Fondo tarjetas (gris oscuro) */
+    --text-muted: #999999;     /* Texto grisáceo */
+    --accent-color: #FFFFFF;   /* Acentos (blanco puro) */
 }
 
 * {
@@ -15,8 +15,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
     line-height: 1.7;
     overflow-x: hidden; /* Evita scroll horizontal */
 }
@@ -35,7 +35,7 @@ h1, h2, h3 {
 
 h2.section-title {
     font-size: 2.8rem;
-    color: var(--primary-dark);
+    color: var(--primary-light);
     text-align: center;
     margin-bottom: 60px;
 }
@@ -54,22 +54,37 @@ main section {
     padding: 100px 20px;
 }
 
+/* --- Secciones (Nuevos colores) --- */
 .section-dark {
-    background-color: var(--primary-dark);
+    background-color: var(--secondary-light); /* Fondo gris oscuro */
 }
 .section-dark h2, .section-dark p, .section-dark h3 {
     color: var(--primary-light);
 }
 .section-dark .highlight-text {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Blanco puro */
 }
 .section-dark p {
-    color: #cbd5e0; /* Un gris claro para texto en fondo oscuro */
+    color: #cbd5e0; 
 }
 
 .section-light {
-    background-color: var(--secondary-light);
+    background-color: var(--primary-dark); /* Fondo negro */
 }
+/* Añadido para que el texto sea visible en .section-light */
+.section-light h2, .section-light p, .section-light h3 {
+    color: var(--primary-light);
+}
+.section-light .section-subtitle {
+     color: var(--text-muted);
+}
+.section-light .card h3 { /* Asegurar que el h3 de la tarjeta use acento */
+    color: var(--accent-color);
+}
+.section-light .card p {
+    color: var(--text-muted);
+}
+
 
 .section-subtitle {
     text-align: center;
@@ -89,16 +104,17 @@ main section {
     font-size: 1.5rem;
 }
 
-/* --- Navegación --- */
+/* --- Navegación (Tema Oscuro) --- */
 .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    /* Fondo oscuro semi-transparente */
+    background: rgba(10, 10, 10, 0.75); 
     backdrop-filter: blur(10px); /* Efecto "glass" */
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #333; /* Borde sutil */
     transition: all 0.3s ease;
 }
 
@@ -112,8 +128,10 @@ main section {
 .nav-logo {
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--primary-dark);
+    color: var(--primary-light);
     letter-spacing: 1px;
+    /* Para la animación glitch */
+    position: relative; 
 }
 
 .nav-menu {
@@ -134,24 +152,26 @@ main section {
 }
 
 .nav-menu a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Blanco */
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Tema Oscuro) --- */
 .hero {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(26, 32, 44, 0.6), rgba(26, 32, 44, 0.6)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    /* CAMBIO: Usar imagen local y gradiente más oscuro */
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('../img/hero-bg.jpg') no-repeat center center/cover;
     background-color: var(--primary-dark);
     color: var(--primary-light);
 }
 
 .hero-title {
     font-size: 4.5rem;
-    background: linear-gradient(90deg, var(--primary-light), var(--accent-color));
+    /* Gradiente sutil blanco a gris */
+    background: linear-gradient(90deg, var(--primary-light), var(--text-muted));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -187,7 +207,8 @@ main section {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    /* Sombra sutil para modo oscuro */
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.1);
 }
 
 /* --- Sección: Problema --- */
@@ -195,6 +216,9 @@ main section {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+}
+.problem-content p {
+    color: var(--text-muted);
 }
 
 /* --- Sección: Enfoque (Cards) --- */
@@ -205,21 +229,21 @@ main section {
 }
 
 .card {
-    background: var(--secondary-light);
+    background: var(--secondary-light); /* Fondo gris oscuro */
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    border: 1px solid #333; /* Borde gris más oscuro */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
 }
 
 .card h3 {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Blanco */
     font-size: 1.3rem;
 }
 
@@ -230,7 +254,7 @@ main section {
     gap: 20px;
 }
 .mission-columns h3 {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Blanco */
 }
 
 /* --- Sección: Hoja de Ruta --- */
@@ -248,13 +272,15 @@ main section {
     background: var(--secondary-light);
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #333;
     text-align: center;
 }
-
 .roadmap-step h3 {
     color: var(--accent-color);
     font-size: 1.6rem;
+}
+.roadmap-step p, .roadmap-justification p {
+    color: var(--text-muted);
 }
 
 .roadmap-arrow {
@@ -270,21 +296,23 @@ main section {
     background: var(--secondary-light);
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #333;
 }
 .roadmap-justification h3 {
-    color: var(--primary-dark);
+    color: var(--primary-light);
 }
-.roadmap-justification p {
-    font-size: 1.1rem;
+.roadmap-justification .highlight-text {
+    color: var(--accent-color); /* Asegurarnos de que resalte en blanco */
 }
+
 
 /* --- Footer --- */
 footer {
     text-align: center;
     padding: 60px 20px;
-    background-color: var(--primary-dark);
-    color: #a0aec0; /* Gris claro para texto de footer */
+    background-color: var(--secondary-light); /* Fondo gris oscuro */
+    color: var(--text-muted);
+    border-top: 1px solid #333;
 }
 
 footer h3 {
@@ -298,28 +326,88 @@ footer h3 {
     margin-top: 25px;
 }
 
+/* --- ¡CORRECCIÓN DE ÍCONOS! --- */
 .social-icons a {
     display: inline-block;
-    color: #a0aec0;
+    color: var(--text-muted); /* Color inicial del ícono */
     transition: color 0.3s ease, transform 0.3s ease;
+    /* Definimos el tamaño en el contenedor <a> */
+    width: 30px; 
+    height: 30px;
 }
 
 .social-icons a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Blanco al pasar el mouse */
     transform: scale(1.1);
 }
 
 .social-icons svg {
-    width: 30px;
-    height: 30px;
-    fill: currentColor; /* El color lo toma del enlace <a> */
+    /* Hacemos que el SVG llene el contenedor <a> */
+    width: 100%;
+    height: 100%;
+    fill: currentColor; /* Hereda el color del <a> */
 }
+/* --- FIN DE CORRECCIÓN DE ÍCONOS --- */
+
 
 .footer-small {
     margin-top: 50px;
     font-size: 0.9rem;
     color: #718096;
 }
+
+/* --- NUEVO: Animación Glitch para el Logo --- */
+.glitch {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-dark); /* Debe coincidir con el fondo del nav */
+    overflow: hidden;
+}
+
+/* Animación del 'antes' (rojo) */
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #FF00C1; /* Magenta/Rojo */
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+/* Animación del 'después' (azul) */
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #00FFD8; /* Cyan/Azul */
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { clip-path: inset(10% 0 80% 0); }
+    20% { clip-path: inset(50% 0 30% 0); }
+    40% { clip-path: inset(30% 0 60% 0); }
+    60% { clip-path: inset(80% 0 10% 0); }
+    80% { clip-path: inset(40% 0 40% 0); }
+    100% { clip-path: inset(70% 0 20% 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip-path: inset(75% 0 10% 0); }
+    20% { clip-path: inset(10% 0 85% 0); }
+    40% { clip-path: inset(60% 0 20% 0); }
+    60% { clip-path: inset(20% 0 70% 0); }
+    80% { clip-path: inset(90% 0 5% 0); }
+    100% { clip-path: inset(40% 0 30% 0); }
+}
+/* --- FIN Animación Glitch --- */
+
 
 /* --- Media Queries (Responsive) --- */
 @media (max-width: 768px) {
